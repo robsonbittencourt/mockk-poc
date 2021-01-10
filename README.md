@@ -23,3 +23,9 @@ Each Mock of a complex type is already configured to return a Mock of the corres
 MockK offers an extensive API to verify method calls in tests. This is very useful in cases where the methods under test do not have an output to be verified. Or even when it is important to check if a method was actually invoked during execution.
 
 Some examples are [simple verification](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L29), [using matches](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L38), [verify number of call on specific method](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L47) and [order that the methods are called](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L57). 
+
+## Capturing Arguments
+
+Sometimes it is necessary to check the arguments used when calling a method. For this, MockK provides the [capture method](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L34), which requires the prior creation of a [slot of the type of the captured argument](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L33).
+
+This makes it possible to access the arguments captured from a [simple method call](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L38), or from [all calls made to the method](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L54).

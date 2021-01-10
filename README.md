@@ -1,6 +1,6 @@
 # mockk-poc
 
-> A POC to testing Kotling mock library MockK
+![mockk-logo](media/mockk-logo.png) ![kotlin-logo](media/kotlin-logo.png)
 
 MockK is a very nice Mock Library for Kotlin. At first glance it is very reminiscent of Mockito. But more in-depth info on the available features, we realized that it is much more powerful.
 

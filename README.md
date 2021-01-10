@@ -29,3 +29,9 @@ Some examples are [simple verification](https://github.com/robsonbittencourt/moc
 Sometimes it is necessary to check the arguments used when calling a method. For this, MockK provides the [capture method](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L34), which requires the prior creation of a [slot of the type of the captured argument](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L33).
 
 This makes it possible to access the arguments captured from a [simple method call](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L38), or from [all calls made to the method](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/capturing/CapturingArgumentsTest.kt#L54).
+
+## Mocking object instantiation
+
+This is a very useful feature to be used when new instances are created in the test method, and you need to have some control over their behavior.
+
+Using the [mockkConstructor](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/mocknewobject/CalculatorTest.kt#L12) method together with the [every](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/mocknewobject/CalculatorTest.kt#L13) MockK allows you to change the behavior of a class constructor so that it returns a Mock when it is instantiated instead of the actual instance of the class.

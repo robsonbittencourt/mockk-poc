@@ -17,3 +17,9 @@ By default, all methods of a mocked class must be mocked. If you want to change 
 Mocks can have the behavior of their methods manipulated for testing purposes. Similar to Mockito MockK [allows this method manipulation](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/chainedmock/PersonTest.kt#L11), but a very interesting feature that it adds is the Mocks chaining easily. .
 
 Each Mock of a complex type is already configured to return a Mock of the corresponding type, [allowing behavior change in chained methods](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/chainedmock/PersonTest.kt#L21).
+
+## Verifying Calls
+
+MockK offers an extensive API to verify method calls in tests. This is very useful in cases where the methods under test do not have an output to be verified. Or even when it is important to check if a method was actually invoked during execution.
+
+Some examples are [simple verification](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L29), [using matches](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L38), [verify number of call on specific method](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L47) and [order that the methods are called](https://github.com/robsonbittencourt/mockk-poc/blob/main/src/test/kotlin/com/rbittencourt/mockkpoc/verify/VerifyTest.kt#L57). 
